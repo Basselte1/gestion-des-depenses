@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord - Gestion des Dépenses</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Conteneur du tableau de bord -->
+    <div class="dashboard">
+        <!-- Barre latérale de navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Gestion des Dépenses</h2>
+            </div>
+
+            <!-- Menu de navigation -->
+            <nav class="sidebar-nav">
+                <a href="home.html" class="nav-item active">🏠 Accueil</a>
+                <a href="depenses.html" class="nav-item">📊 Dépenses</a>
+                <a href="categories.html" class="nav-item">🏷️ Catégories</a>
+                <a href="index.html" class="nav-item logout">🚪 Déconnexion</a>
+            </nav>
+        </aside>
+
+        <!-- Contenu principal -->
+        <main class="main-content">
+            <!-- En-tête -->
+            <div class="content-header">
+                <h1>Tableau de Bord</h1>
+                <p id="userGreeting" class="user-greeting">Bienvenue</p>
+            </div>
+
+            <!-- Grille des statistiques -->
+            <div class="stats-grid">
+                <!-- Carte 1: Total Mensuel -->
+                <div class="stat-card">
+                    <h3>Total Mensuel</h3>
+                    <p class="stat-value" id="totalMonthly">0 FCFA</p>
+                </div>
+
+                <!-- Carte 2: Total Annuel -->
+                <div class="stat-card">
+                    <h3>Total Annuel</h3>
+                    <p class="stat-value" id="totalYearly">0 FCFA</p>
+                </div>
+
+                <!-- Carte 3: Montant Moyen -->
+                <div class="stat-card">
+                    <h3>Montant Moyen</h3>
+                    <p class="stat-value" id="averageAmount">0 FCFA</p>
+                </div>
+
+                <!-- Carte 4: Nombre de Dépenses -->
+                <div class="stat-card">
+                    <h3>Nombre de Dépenses</h3>
+                    <p class="stat-value" id="totalExpenses">0</p>
+                </div>
+            </div>
+
+            <!-- Section des dépenses récentes -->
+            <div class="recent-expenses">
+                <h2>Dépenses Récentes</h2>
+                <div id="recentExpensesList" class="expenses-list">
+                    <p class="empty-message">Aucune dépense enregistrée</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Script principal -->
+    <script src="script.js"></script>
+</body>
+</html>

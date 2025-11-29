@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Dépenses</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Conteneur du tableau de bord -->
+    <div class="dashboard">
+        <!-- Barre latérale de navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Gestion des Dépenses</h2>
+            </div>
+
+            <!-- Menu de navigation -->
+            <nav class="sidebar-nav">
+                <a href="home.html" class="nav-item">🏠 Accueil</a>
+                <a href="depenses.html" class="nav-item active">📊 Dépenses</a>
+                <a href="categories.html" class="nav-item">🏷️ Catégories</a>
+                <a href="index.html" class="nav-item logout">🚪 Déconnexion</a>
+            </nav>
+        </aside>
+
+        <!-- Contenu principal -->
+        <main class="main-content">
+            <div class="content-header">
+                <h1>Gestion des Dépenses</h1>
+            </div>
+
+            <div class="page-conteneur">
+                <!-- FORMULAIRE POUR AJOUTER/MODIFIER UNE DÉPENSE -->
+                <section class="section-formulaire">
+                    <h2>Ajouter une Dépense</h2>
+
+                    <form id="formeDepense" class="formulaire-champs">
+                        <!-- Champ: Description -->
+                        <div class="groupe-champ">
+                            <label for="description">Description *</label>
+                            <input type="text" id="description" placeholder="Ex: Essence" required>
+                        </div>
+
+                        <!-- Champ: Montant -->
+                        <div class="groupe-champ">
+                            <label for="montant">Montant (FCFA) *</label>
+                            <input type="number" id="montant" placeholder="0" min="0" required>
+                        </div>
+
+                        <!-- Champ: Catégorie -->
+                        <div class="groupe-champ">
+                            <label for="categorie">Catégorie *</label>
+                            <select id="categorie" required>
+                                <option value="">-- Sélectionner --</option>
+                            </select>
+                        </div>
+
+                        <!-- Champ: Date -->
+                        <div class="groupe-champ">
+                            <label for="date">Date *</label>
+                            <input type="date" id="date" required>
+                        </div>
+
+                        <!-- Boutons d'action -->
+                        <div class="bouton-groupe">
+                            <button type="submit" class="bouton">Ajouter</button>
+                            <button type="reset" class="bouton">Réinitialiser</button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- LISTE DES DÉPENSES -->
+                <section class="section-liste">
+                    <h2>Liste des Dépenses</h2>
+
+                    <!-- Barre de recherche et filtre -->
+                    <div class="barre-recherche">
+                        <input type="text" id="champRecherche" placeholder="Rechercher...">
+                        <select id="filtreCategorie">
+                            <option value="">-- Toutes les catégories --</option>
+                        </select>
+                    </div>
+
+                    <!-- Liste des éléments -->
+                    <div id="listeDependances" class="elements-liste">
+                        <p class="empty-message">Aucune dépense enregistrée</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+    <script src="depenses.js"></script>
+</body>
+</html>

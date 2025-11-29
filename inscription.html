@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Gestion des Dépenses</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Page d'inscription -->
+    <div class="page-inscription">
+        <div class="formulaire-conteneur">
+            <h1>Inscription</h1>
+            <p class="sous-titre">Créez votre compte</p>
+
+            <!-- Formulaire d'inscription -->
+            <form id="formeInscription">
+                <!-- Champ Nom complet -->
+                <div class="groupe-champ">
+                    <label for="nom">Nom complet</label>
+                    <input type="text" id="nom" placeholder="Votre nom complet" required>
+                </div>
+
+                <!-- Champ Email -->
+                <div class="groupe-champ">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="votre.email@exemple.com" required>
+                </div>
+
+                <!-- Champ Mot de passe -->
+                <div class="groupe-champ">
+                    <label for="motDePasse">Mot de passe</label>
+                    <input type="password" id="motDePasse" placeholder="Minimum 6 caractères" required>
+                </div>
+
+                <!-- Champ Confirmer mot de passe -->
+                <div class="groupe-champ">
+                    <label for="confirmationMotDePasse">Confirmer le mot de passe</label>
+                    <input type="password" id="confirmationMotDePasse" placeholder="Confirmez votre mot de passe" required>
+                </div>
+
+                <!-- Message d'erreur -->
+                <div id="messageErreur" class="message-erreur"></div>
+
+                <!-- Message de succès -->
+                <div id="messageSucces" class="message-succes"></div>
+
+                <!-- Bouton d'inscription -->
+                <button type="submit" class="bouton">S'inscrire</button>
+            </form>
+
+            <!-- Lien vers connexion -->
+            <p class="lien-page">
+                Vous avez un compte ? <a href="index.html">Se connecter ici</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Script principal -->
+    <script src="script.js"></script>
+</body>
+</html>
